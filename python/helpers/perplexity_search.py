@@ -6,6 +6,7 @@ from langchain_core.callbacks import CallbackManagerForLLMRun
 from langchain_core.outputs.llm_result import LLMResult
 from typing import List, Optional, Any
 from openai import OpenAI
+import models
 import os
 
 
@@ -62,8 +63,9 @@ class PerplexityCrewLLM(BaseLLM):
         return "PerplexityAI"
     
 
-def PerplexitySearchLLM(api_key,model_name="sonar-medium-online",base_url="https://api.perplexity.ai"):    
-    client = OpenAI(api_key=api_key_from_env, base_url=base_url)
+def PerplexitySearchLLM(api_key,model_name="sonar-medium-online",base_url="https://api.perplexity.ai"):
+    client = models.get_google_chat()
+    # client = OpenAI(api_key=api_key_from_env, base_url=base_url)
         
     def call_model(query:str):
         messages = [

@@ -88,6 +88,7 @@ def get_ollama_phi(temperature=DEFAULT_TEMPERATURE):
     return Ollama(model="phi3:3.8b-mini-instruct-4k-fp16",temperature=temperature)
 
 def get_google_chat(model_name="gemini-1.5-flash-latest", api_key=None, temperature=DEFAULT_TEMPERATURE):
+    model_name="gemini-1.5-pro"
     api_key = api_key or get_api_key("google")
     return ChatGoogleGenerativeAI(model=model_name, temperature=temperature, google_api_key=api_key, 
                                   safety_settings={HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE }) # type: ignore
