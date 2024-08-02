@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "agent-zero"
+version = "0.1.0"
+description = "Personal AI framework"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "1.0.1"
+langchain-groq = "0.1.6"
+langchain-huggingface = "0.0.3"
+docker = "7.1.0"
+duckduckgo-search = "6.1.12"
+inputimeout = "1.0.4"
+langchain-anthropic = "0.1.19"
+langchain-google-genai = "1.0.7"
+sentence-transformers = "3.0.1"
+webcolors = "24.6.0"
+langchain-chroma = "0.1.2"
+langchain-community = "0.2.7"
+langchain-openai = "0.1.15"
+paramiko = "3.4.0"
+ansio = "^0.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
